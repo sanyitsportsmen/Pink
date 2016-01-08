@@ -1,0 +1,102 @@
+.review {
+  position: relative;
+  padding: 45px 0 70px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-right: 100vw solid #f2f2f2;
+    border-top: 8vw solid transparent;
+    z-index: -1;
+  }
+
+  &--width-fix:after {
+    width: 100%;
+  }
+
+  @media @tablet {
+    padding: 70px 0 80px;
+  }
+
+  @media @desktop {
+    padding-top: 185px;
+    padding-bottom: 95px;
+    background: data-uri('../img/research__quotes.svg') 50% 75px no-repeat;
+  }
+
+  &__inner-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__item {
+    padding: 0 20px 35px;
+    line-height: 30px;
+
+    @media @tablet {
+      display: flex;
+      flex-direction: column;
+      padding: 0 40px 35px;
+    }
+
+    @media @desktop {
+      box-sizing: content-box;
+      max-width: 690px;
+      margin: 0 auto;
+    }
+  }
+
+  &__description {
+    display: none;
+
+    @media @tablet {
+      display: block;
+      order: 3;
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+    @media @desktop {
+      font-size: 18px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 15px;
+    line-height: 25px;
+    font-weight: bold;
+
+    @media @tablet {
+      order: 2;
+      margin-bottom: 0px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @media @desktop {
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: normal;
+    color: #283645;
+    quotes: "\00ab" "\00bb";
+
+    @media @tablet {
+      order: 1;
+      margin-bottom: 35px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    @media @desktop {
+      quotes: none;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Адаптивная вёрстка, SVG, HTML5, CSS3, LESS, JavaScript, IE10+. Автоматизация сборки с помощью Grunt.

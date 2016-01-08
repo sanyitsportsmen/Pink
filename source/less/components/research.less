@@ -1,0 +1,63 @@
+.research {
+  display: none;
+
+  @media @tablet {
+    display: block;
+    min-height: 360px;
+    padding: 95px 40px 55px 50%;
+    background: url('../img/research-bgr.svg') 10% 55px no-repeat;
+    background-size: 260px auto;
+  }
+
+  @media @desktop {
+    min-height: 470px;
+    padding: 0 10%;
+    background-color: #f2f2f2;
+    background-position: 14% 45%;
+    background-size: 305px auto;
+  }
+
+  &__text {
+    @media @desktop {
+      padding: 150px 0 0 40%;
+    }
+  }
+
+  &__header {
+    padding: 0 15px 10px 0;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: bold;
+
+    @media @desktop {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 10px;
+    line-height: 25px;
+    font-size: 14px;
+
+    @media @desktop {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding-bottom: 30px;
+    line-height: 24px;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #d22856;
+
+    @media @desktop {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+

@@ -1,0 +1,156 @@
+.contacts {
+  padding-top: 40px;
+  text-align: center;
+
+  @media @tablet {
+    padding-top: 45px;
+  }
+
+  @media @desktop {
+    padding-top: 65px;
+  }
+  &__items {
+    @media @tablet {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  &__header {
+    margin-bottom: 25px;
+    padding: 0 20px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #283645;
+
+    @media @tablet {
+      margin-bottom: 35px;
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    @media @desktop {
+      margin-bottom: 50px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  &__item {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+    padding: 0 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media @tablet {
+      min-width: 275px;
+      padding: 0;
+      margin: 0 25px 25px;
+      line-height: 50px;
+    }
+
+    @media @desktop {
+      margin-bottom: 15px;
+
+      &--email {
+        order: 3;
+      }
+
+      &--address {
+        order: 2;
+      }
+    }
+  }
+  &__item-header {
+    line-height: 30px;
+    font-weight: bold;
+    color: #283645;
+
+    @media @desktop {
+      line-height: 35px;
+      margin-bottom: 10px;
+    }
+  }
+  &__item-text {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #d22856;
+
+    &--email {
+
+      &:active {
+        opacity: .3;
+        text-decoration: none;
+        transition: none;
+      }
+
+      @media @desktop {
+        &:hover {
+          color: #283645;
+          box-shadow: 0 2px 0 0 #283645;
+          transition: all 0.15s ease;
+        }
+
+        &:active {
+          transition: none;
+        }
+      }
+    }
+  }
+  &__map {
+    position: relative;
+    height: 195px;
+    margin-top: 35px;
+    background: url(../img/contacts__map_bgr-mobile.jpg) 50% 70% no-repeat;
+
+    @media @tablet {
+      height: 380px;
+      margin-top: 25px;
+      background-image: url(../img/contacts__map_bgr-tablet.jpg);
+      background-position-y: 60%;
+    }
+
+    @media @desktop {
+      height: 525px;
+      margin-top: 0;
+      background-image: url(../img/contacts__map_bgr-desktop.jpg);
+
+      @media @retina-2x {
+        background-image: url(../img/contacts__map_bgr-desktop@2x.jpg);
+        background-position-x: 40%;
+      }
+    }
+
+    &--js {
+      background: none;
+    }
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      border-right: 50vw solid transparent;
+      border-top: 35px solid white;
+      border-left: 50vw solid transparent;
+
+      @media @tablet {
+        border-top-width: 75px;
+      }
+
+      @media @desktop {
+        border-top-width: 125px;
+      }
+    }
+
+    &--width-fix:before {
+      width: 100%;
+    }
+  }
+}
