@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         },
         concat: {
             dist: {
-                src: [ 'source/js/script.js', 'source/js/google-map.js', 'source/js/menu-toggle.js'],
+                src: [ 'source/js/script.js', 'source/js/google-map.js', 'source/js/menu-toggle.js', 'source/js/scrollTo.js'],
                 dest: 'source/js/script_concat.js',
             },
         },
