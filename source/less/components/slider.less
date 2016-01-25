@@ -45,6 +45,23 @@
   left: -100%;
   animation: forward-out 0.7s ease-out;
 }
+.left {
+  #slide1:checked ~ .review__inner-wrap .sl1,
+  #slide2:checked ~ .review__inner-wrap .sl2,
+  #slide3:checked ~ .review__inner-wrap .sl3 {
+    left: 0;
+    position: relative;
+    z-index: 3;
+    animation: backward-in 0.7s ease-out;
+  }
+  #slide1:checked ~ .review__inner-wrap .sl3,
+  #slide2:checked ~ .review__inner-wrap .sl1,
+  #slide3:checked ~ .review__inner-wrap .sl2 {
+    z-index: 2;
+    left: 100%;
+    animation: backward-out 0.7s ease-out;
+  }
+}
 #slide1:checked ~ .controls label:nth-child(1),
 #slide2:checked ~ .controls label:nth-child(2),
 #slide3:checked ~ .controls label:nth-child(3) {
@@ -96,5 +113,21 @@
   }
   to {
     left: -100%;
+  }
+}
+@keyframes backward-in {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes backward-out {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
   }
 }
